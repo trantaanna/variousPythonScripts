@@ -1,0 +1,37 @@
+{
+    "AuthKey":  "accessKey",
+    "AuthPwd":  "secretKey",
+    "PathsToSync":[
+      {
+        "details": "Copy over PE ensemble file",
+        "cmd":  "cp",
+        "src": "s3://cylance.engine/models/PE/Eve/20170907/Ensemble-20170907-S2-PE.cym",
+        "dest":  "../models/PE_Eve/Ensemble-20170907-S2-PE.cym"
+      },
+      {
+        "detail": "copy over test data",
+        "cmd": "sync",
+        "src": "s3://cylance.engine/testdata/small_sampleset",
+        "dest":  "../testdata"
+      },
+      {
+        "details": "copy over test data for centroid",
+        "cmd":  "sync",
+        "src": "s3://cylance.engine/testdata/drivetrain",
+        "dest":  "../testdata"
+      },
+      {
+        "details": "copy over chart_centroid.json file ",
+        "cmd":  "sync",
+        "src": "s3://cylance.engine/testdata/infinity_oem/v0.6.0/centroid_testing/white/chart/centroid/dalek/",
+        "dest":  "../testdata"
+      },
+      {
+        "details": "copy over chart centroid sample",
+        "cmd":  "sync",
+        "src": "s3://cylance.engine/testdata/infinity_oem/v0.6.0/centroid_testing/white/chart/samples",
+        "dest":  "../testdata/centroid_samples/white_static/dalek"
+      }
+    ]
+}
+
